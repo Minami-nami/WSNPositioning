@@ -9,7 +9,7 @@ pos =  {1: (4.8, 1.8) , 2: (1.8, 1.8) , 3: (4.8, 4.8) ,
         4: (1.8, 4.8) , 5: (4.8, 7.8) , 6: (1.8, 7.8) ,
         7: (4.8, 13.8), 8: (1.8, 13.8), 9: (7.25, 6.25)}
 
-data_index = [3, 4, 7, 8, 9, 12, 13, 16, 17, 19]
+data_index = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20]
 
 
 def gendata():
@@ -23,7 +23,7 @@ def gendata():
             position = []
             for line in file:
                 if line == '#\n' and len(position) != 0:
-                    with open('./data/data.txt', 'a') as data:
+                    with open('./data/data.txt', 'a', encoding='UTF-8') as data:
                         data.write('(' + ','.join(position) + ') ')
                         data.write(' '.join(['(' + ','.join([str(key), str(v)]) + ')' for key, value in cur.items() for v in value]))
                         data.write('\n')
