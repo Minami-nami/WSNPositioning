@@ -17,8 +17,8 @@ def evaluate(data:dict):
         color = np.array(np.random.randint(0, 100))
     else:
         color = np.arange(0, 100, 100.0/(len(data)))
-    sizesR = np.linspace(20, 20, len(data))
-    sizesC = np.linspace(15, 15, len(data))
+    sizesR = np.linspace(10, 10, len(data))
+    sizesC = np.linspace(20, 20, len(data))
     plt.scatter(real_x_data, real_y_data, sizes=sizesR, c=color, cmap='viridis')
     plt.scatter(calc_x_data, calc_y_data, sizes=sizesC, c=color, cmap='viridis')
     plt.xlabel('x-coordinate')
